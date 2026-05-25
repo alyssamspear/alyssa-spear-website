@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssa Spear</title>
+    <meta name="description" content="The personal website of Alyssa Spear.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Spotlight effect -->
+    <div class="spotlight" id="spotlight"></div>
+    
+    <!-- Ambient glowing orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="status-badge" id="status-badge">
+                <span class="status-dot"></span>
+                <span class="status-text">Available</span>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1 class="name" id="hero-name">alyssa spear</h1>
+            <p class="subtitle">Creative Technology & Design</p>
+        </section>
+
+        <footer class="footer">
+            <div class="social-links">
+                <a href="mailto:hello@alyssaspear.com" class="link-item" id="email-link">
+                    <span>Get in Touch</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 10.5L10.5 1.5M10.5 1.5H3.5M10.5 1.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; <span id="current-year"></span> Alyssa Spear. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Custom Script for Interactive Experience -->
+    <script src="script.js"></script>
+</body>
+</html>
