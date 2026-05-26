@@ -1,102 +1,139 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     // 1. Dynamic Year Update
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // 2. Mouse Tracking Spotlight Effect
-    const spotlight = document.getElementById('spotlight');
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let currentX = mouseX;
-    let currentY = mouseY;
+    // 2. Interactive Portfolio Gallery Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    // Throttle spotlight updates using requestAnimationFrame for 60fps butter-smooth motion
-    window.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                // Reset card styling for transitions
+                card.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    // Show matching cards
+                    card.style.display = 'flex';
+                    // Force repaint to trigger CSS transitions smoothly
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translate(0, 0) scale(1)';
+                    }, 20);
+                } else {
+                    // Hide non-matching cards
+                    card.style.opacity = '0';
+                    card.style.transform = 'translate(0, 10px) scale(0.98)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 400); // Matches transition duration
+                }
+            });
+        });
     });
 
-    // Touch support for mobile devices
-    window.addEventListener('touchmove', (e) => {
-        if (e.touches.length > 0) {
-            mouseX = e.touches[0].clientX;
-            mouseY = e.touches[0].clientY;
-        }
-    }, { passive: true });
+    // 3. Skills Bar Scroll Animation using Intersection Observer
+    const skillsSection = document.getElementById('skills');
+    const skillBars = document.querySelectorAll('.skill-bar-inner');
 
-    function updateSpotlight() {
-        // Linear interpolation (lerp) for trailing smooth lag effect
-        const dx = mouseX - currentX;
-        const dy = mouseY - currentY;
-        
-        currentX += dx * 0.1;
-        currentY += dy * 0.1;
+    if (skillsSection && skillBars.length > 0) {
+        const skillsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate each skill bar to its target value
+                    skillBars.forEach(bar => {
+                        const targetWidth = bar.getAttribute('data-target');
+                        bar.style.width = targetWidth;
+                    });
+                    // Unobserve after running once to keep state
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15 // Triggers when 15% of the skills section is visible
+        });
 
-        const xPercent = (currentX / window.innerWidth) * 100;
-        const yPercent = (currentY / window.innerHeight) * 100;
-
-        document.documentElement.style.setProperty('--mouse-x', `${xPercent}%`);
-        document.documentElement.style.setProperty('--mouse-y', `${yPercent}%`);
-
-        requestAnimationFrame(updateSpotlight);
+        skillsObserver.observe(skillsSection);
     }
-    
-    // Start loop
-    updateSpotlight();
 
-    // 3. Premium Interactive Name Effect: Sparkle Burst on Click
-    const heroName = document.getElementById('hero-name');
-    if (heroName) {
-        heroName.addEventListener('click', (e) => {
-            createSparkleBurst(e.clientX, e.clientY);
+    // 4. Easter Egg: Sparkle Burst on Logo and Signature Click
+    const logoLink = document.querySelector('.logo-text');
+    const footerSignature = document.querySelector('.footer-signature');
+
+    if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            createBotanicalSparkle(e.clientX, e.clientY);
         });
     }
 
-    function createSparkleBurst(x, y) {
-        const count = 12;
-        const colors = ['#9f7aea', '#4299e1', '#ffffff', '#a855f7'];
+    if (footerSignature) {
+        footerSignature.addEventListener('click', (e) => {
+            createBotanicalSparkle(e.clientX, e.clientY);
+        });
+    }
+
+    function createBotanicalSparkle(x, y) {
+        const count = 16;
+        // Botanical brand colors (Bright Red, Olive Green, Magenta, Pale Gold)
+        const colors = ['#d83832', '#788b5c', '#bf4184', '#e7ca83', '#7c6b9d'];
 
         for (let i = 0; i < count; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('sparkle');
+            const leafSpark = document.createElement('div');
             
-            // Random styling for particles
-            const size = Math.random() * 6 + 4;
+            // Random sizes and colors
+            const size = Math.random() * 8 + 6;
             const color = colors[Math.floor(Math.random() * colors.length)];
             
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.background = color;
-            particle.style.borderRadius = '50%';
-            particle.style.position = 'fixed';
-            particle.style.left = `${x}px`;
-            particle.style.top = `${y}px`;
-            particle.style.pointerEvents = 'none';
-            particle.style.zIndex = '999';
-            particle.style.opacity = '1';
-            particle.style.boxShadow = `0 0 10px ${color}`;
+            leafSpark.style.width = `${size}px`;
+            leafSpark.style.height = `${size}px`;
+            leafSpark.style.background = color;
+            leafSpark.style.position = 'fixed';
+            leafSpark.style.left = `${x}px`;
+            leafSpark.style.top = `${y}px`;
+            leafSpark.style.pointerEvents = 'none';
+            leafSpark.style.zIndex = '9999';
+            leafSpark.style.border = '1px solid #070707';
             
-            // Random direction and velocity
+            // Give it an organic leaf/teardrop shape using border-radius
+            leafSpark.style.borderRadius = '0% 100% 0% 100%';
+            
+            // Random organic rotation
+            const rotation = Math.random() * 360;
+            leafSpark.style.transform = `rotate(${rotation}deg)`;
+            
+            // Random trajectory
             const angle = (i / count) * 2 * Math.PI + (Math.random() * 0.4 - 0.2);
-            const speed = Math.random() * 100 + 50;
+            const speed = Math.random() * 120 + 60;
             const vx = Math.cos(angle) * speed;
             const vy = Math.sin(angle) * speed;
             
-            document.body.appendChild(particle);
+            document.body.appendChild(leafSpark);
 
-            // Animate using Web Animations API
-            const animation = particle.animate([
-                { transform: 'translate(0, 0) scale(1)', opacity: 1 },
-                { transform: `translate(${vx}px, ${vy}px) scale(0)`, opacity: 0 }
+            // Smooth organic animation using Web Animations API
+            const animation = leafSpark.animate([
+                { transform: `translate(0, 0) rotate(${rotation}deg) scale(1)`, opacity: 1 },
+                { transform: `translate(${vx}px, ${vy}px) rotate(${rotation + 180}deg) scale(0)`, opacity: 0 }
             ], {
-                duration: 800 + Math.random() * 400,
+                duration: 900 + Math.random() * 400,
                 easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)'
             });
 
             animation.onfinish = () => {
-                particle.remove();
+                leafSpark.remove();
             };
         }
     }
