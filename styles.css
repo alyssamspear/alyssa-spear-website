@@ -904,6 +904,7 @@ a {
     transform: rotate(8deg);
     animation: orchid-sway 10s infinite alternate ease-in-out;
     pointer-events: none;
+    mix-blend-mode: normal;
 }
 
 .hero-illustration-collage:hover .hero-orchid {
