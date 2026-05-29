@@ -898,8 +898,8 @@ a {
 .hero-orchid {
     position: absolute;
     width: 70%;
-    top: -15%;
-    left: -6%;
+    top: -18%;
+    left: -0%;
     z-index: 2;
     transform: rotate(8deg);
     animation: orchid-sway 10s infinite alternate ease-in-out;
