@@ -897,8 +897,8 @@ a {
 
 .hero-orchid {
     position: absolute;
-    width: 85%;
-    top: -8%;
+    width: 60%;
+    top: -15%;
     left: -12%;
     z-index: 2;
     transform: rotate(8deg);
