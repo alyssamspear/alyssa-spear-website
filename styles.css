@@ -487,6 +487,16 @@ a {
     transform: scale(1.03);
 }
 
+.project-fallback-img img {
+    filter: drop-shadow(4px 4px 0px var(--color-black));
+    transition: var(--transition-base);
+}
+
+.project-card:hover .project-fallback-img img {
+    transform: scale(1.04) rotate(1deg);
+    filter: drop-shadow(6px 6px 0px var(--color-black));
+}
+
 .project-card-badge {
     position: absolute;
     top: 1rem;
