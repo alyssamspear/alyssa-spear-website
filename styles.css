@@ -447,7 +447,7 @@ a {
 
 .project-card {
     border: var(--border-main);
-    box-shadow: var(--shadow-flat);
+    box-shadow: 4px 4px 0px 0px var(--color-black);
     background: var(--color-white);
     display: flex;
     flex-direction: column;
@@ -457,7 +457,7 @@ a {
 
 .project-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: var(--shadow-flat-hover);
+    box-shadow: 7px 7px 0px 0px var(--color-black);
 }
 
 .project-thumbnail-wrap {
@@ -821,18 +821,21 @@ a {
 
 /* Hero Headshot Styling */
 .hero-headshot {
-    max-height: 480px;
-    width: auto;
-    border: var(--border-main);
-    box-shadow: var(--shadow-flat);
-    filter: none;
+    width: 380px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: drop-shadow(6px 6px 0px var(--color-black));
     mix-blend-mode: normal;
     transition: var(--transition-base);
+    position: relative;
+    z-index: 2;
 }
 
 .hero-headshot:hover {
     transform: scale(1.02);
-    box-shadow: var(--shadow-flat-hover);
+    filter: drop-shadow(8px 8px 0px var(--color-black));
 }
 
 /* Multi-Page Detail Page Layout Styles */
