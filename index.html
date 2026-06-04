@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssa Spear — Graphic Designer & Creative Director</title>
+    <meta name="description" content="Alyssa Spear is a professional Graphic Designer and Creative Director specializing in Adobe Creative Suite, paid social, brand development, and operations management.">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+        <a href="#" class="logo-link" id="logo">
+            <span class="logo-text">alyssa spear</span>
+        </a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- HERO / LANDING SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="hero-subtitle">Graphic Designer & Creative Director</p>
+                <h1 class="hero-title">cultivating creative growth</h1>
+                <p class="hero-tagline">
+                    Creative professional with a track record in brand development, product design, and operations management. Experienced in leading cross-functional teams, launching community-driven organizations, and delivering cohesive visual identities across print and digital channels.
+                </p>
+                <a href="#work" class="btn" id="hero-cta-btn">
+                    Explore Selected Works
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 13.5L13.5 4.5M13.5 4.5H6.5M13.5 4.5V11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- HERO ILLUSTRATION: Centered Headshot -->
+                <img src="images/headshot_may_28th.png" alt="Alyssa Spear Headshot" class="brand-image hero-headshot">
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section about" id="about">
+            <div class="about-graphic-container">
+                <!-- SWISS CHARD ILLUSTRATION: Brand Asset -->
+                <img src="images/chard.png" alt="Swiss chard botanical illustration" class="brand-image about-chard">
+            </div>
+            
+            <div class="about-content">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">a cultivated approach</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <p class="about-bio">
+                    I'm a graphic designer and creative director who's spent years building brands from the ground up — from launching a community-driven nonprofit to leading creative teams at consumer brands. My work lives at the intersection of visual identity and marketing performance. I design the look, then make sure it actually works.
+                </p>
+                <p class="about-bio" style="font-size: 1.1rem; margin-bottom: 3.5rem;">
+                    My background bridges the gap between high end aesthetic execution (Adobe Creative Suite, typography, print design) and target focused campaign performance (Facebook Ads, social media strategy, acquisition). With a positive attitude, strong work ethic, and a continuous hunger to learn, I step into every creative challenge ready to collaborate and expand boundaries. Whether it's a full brand identity, a product line expansion, or a paid social campaign — I treat every detail like it matters, because it does.
+                </p>
+                
+                <div class="about-details">
+                    <div class="about-pillar">
+                        <h3 class="about-pillar-title">Visual Precision</h3>
+                        <p>Specializing in print-ready layouts, creative packaging, vector typography, and branding identities with flawless structural composition.</p>
+                    </div>
+                    <div class="about-pillar">
+                        <h3 class="about-pillar-title">Paid Media Strategy</h3>
+                        <p>Designing high-converting graphics for paid social campaigns across Facebook, Instagram, and LinkedIn. Setting target metrics and running conversion-driven models.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO/WORK GALLERY SECTION -->
+        <section class="section" id="work">
+            <div class="section-title-wrap">
+                <h2 class="section-title">selected works</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- FILTER BUTTONS -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Growth</button>
+                <button class="filter-btn" data-filter="print">Print Design</button>
+                <button class="filter-btn" data-filter="digital">Digital Content</button>
+                <button class="filter-btn" data-filter="social">Social Campaigns</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
+            </div>
+
+            <!-- GALLERY GRID -->
+            <div class="portfolio-grid" id="portfolio-grid">
+                
+                <!-- Project 1: Whirley -->
+                <a href="whirley.html" class="project-card" data-category="print">
+                    <div class="project-thumbnail-wrap">
+                        <span class="project-card-badge">Print Design</span>
+                        <div class="project-fallback-img" style="background-color: var(--color-tan);">
+                            <img src="images/chard.png" alt="Swiss Chard illustration" style="max-height: 140px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <h3 class="project-title">Product to Shelf: 7-Eleven Nationwide</h3>
+                        <p class="project-desc">Designed a 16 oz coffee mug selected from multiple concepts and distributed to 7-Eleven stores nationwide. Photographed and edited over 1,000 product images for the Whirley DrinkWorks! catalog and trade show displays.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Illustrator</span>
+                            <span class="tool-tag">Photoshop</span>
+                            <span class="tool-tag">Product Photography</span>
+                            <span class="tool-tag">Print Production</span>
+                        </div>
+                        <span class="view-project-link">View Project &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Project 2: Reality Upgrade -->
+                <a href="reality-upgrade.html" class="project-card" data-category="branding">
+                    <div class="project-thumbnail-wrap">
+                        <span class="project-card-badge">Branding</span>
+                        <div class="project-fallback-img" style="background-color: var(--color-gold);">
+                            <img src="images/rosemary.png" alt="Rosemary illustration" style="max-height: 140px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <h3 class="project-title">Reality Upgrade Brand Identity</h3>
+                        <p class="project-desc">Founded a nonprofit and built its entire visual identity — logo, packaging, marketing collateral, and a cohesive brand system across print and digital. Directed 60% of profits to community projects through a transparent voting model.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Illustrator</span>
+                            <span class="tool-tag">InDesign</span>
+                            <span class="tool-tag">Brand Strategy</span>
+                            <span class="tool-tag">After Effects</span>
+                            <span class="tool-tag">Photography</span>
+                        </div>
+                        <span class="view-project-link">View Project &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Project 3: Evergreen -->
+                <a href="evergreen.html" class="project-card" data-category="digital">
+                    <div class="project-thumbnail-wrap">
+                        <span class="project-card-badge">Digital Content</span>
+                        <div class="project-fallback-img" style="background-color: var(--color-olive);">
+                            <img src="images/bokchoy.png" alt="Bok Choy illustration" style="max-height: 140px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <h3 class="project-title">Product Line Expansion</h3>
+                        <p class="project-desc">Designed graphics and motion for client projects in Illustrator and After Effects. Expanded single-product packaging into cohesive product line systems. Presented concepts to clients, integrated feedback, and produced print-ready files.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Illustrator</span>
+                            <span class="tool-tag">After Effects</span>
+                            <span class="tool-tag">eCommerce Design</span>
+                        </div>
+                        <span class="view-project-link">View Project &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Project 4: Haven House -->
+                <a href="haven-house.html" class="project-card" data-category="social">
+                    <div class="project-thumbnail-wrap">
+                        <span class="project-card-badge">Social Campaigns</span>
+                        <div class="project-fallback-img" style="background-color: var(--color-tan);">
+                            <img src="images/tomatoes.png" alt="Tomatoes illustration" style="max-height: 140px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <h3 class="project-title">Haven House — Social Media & Strategy</h3>
+                        <p class="project-desc">Managed social media content and marketing strategy for a Christian fellowship house, and helped reconfigure their overall business strategy.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Content Strategy</span>
+                            <span class="tool-tag">Social Media Management</span>
+                            <span class="tool-tag">Business Strategy</span>
+                        </div>
+                        <span class="view-project-link">View Project &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Project 5: Community Campaign Series -->
+                <div class="project-card" data-category="social">
+                    <div class="project-thumbnail-wrap">
+                        <span class="project-card-badge">Social Campaigns</span>
+                        <div class="project-fallback-img" style="background-color: var(--color-magenta);">
+                            <img src="images/rose.png" alt="Rose illustration" style="max-height: 140px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <h3 class="project-title">Community Campaign Series</h3>
+                        <p class="project-desc">A structured high-performance paid ad campaign on Facebook & Instagram, resulting in an 18% lift in clicks and direct conversion.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Facebook Ads</span>
+                            <span class="tool-tag">Copywriting</span>
+                            <span class="tool-tag">A/B Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Stockton University -->
+                <a href="stockton.html" class="project-card" data-category="print">
+                    <div class="project-thumbnail-wrap">
+                        <span class="project-card-badge">Academic Design</span>
+                        <div class="project-fallback-img" style="background-color: var(--color-blue);">
+                            <img src="images/palette.png" alt="Palette illustration" style="max-height: 140px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="project-meta">
+                        <h3 class="project-title">Stockton University Design Portfolio</h3>
+                        <p class="project-desc">Academic coursework and design showcase for B.A. in Graphic Design. Showcasing branding, typography, illustration, and print layout projects.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Illustrator</span>
+                            <span class="tool-tag">Photoshop</span>
+                            <span class="tool-tag">InDesign</span>
+                        </div>
+                        <span class="view-project-link">View Project &rarr;</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section" id="skills">
+            <div class="section-title-wrap">
+                <h2 class="section-title">core competencies</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-main-grid">
+                    
+                    <!-- Adobe Creative Suite -->
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title">Adobe Creative Suite</h3>
+                        <div class="skills-tag-list">
+                            <span class="tool-tag skill-badge">Adobe Photoshop</span>
+                            <span class="tool-tag skill-badge">Adobe Illustrator</span>
+                            <span class="tool-tag skill-badge">Adobe InDesign</span>
+                        </div>
+                    </div>
+
+                    <!-- Paid Media & Marketing -->
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title">Digital Marketing</h3>
+                        <div class="skills-tag-list">
+                            <span class="tool-tag skill-badge">Facebook & TikTok Ads Manager</span>
+                            <span class="tool-tag skill-badge">Paid Social Campaigns</span>
+                            <span class="tool-tag skill-badge">Social Strategy (FB, IG, LI)</span>
+                            <span class="tool-tag skill-badge">Customer Acquisition</span>
+                        </div>
+                    </div>
+
+                    <!-- Content & Media -->
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title">Content & Strategy</h3>
+                        <div class="skills-tag-list">
+                            <span class="tool-tag skill-badge">Digital Content Creation</span>
+                            <span class="tool-tag skill-badge">Video Editing (Premiere/After Effects)</span>
+                            <span class="tool-tag skill-badge">Print Ready Artwork</span>
+                            <span class="tool-tag skill-badge">Website Design</span>
+                            <span class="tool-tag skill-badge">Photography</span>
+                        </div>
+                    </div>
+
+                    <!-- Workflow & Mindset -->
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title">Execution & Strategy</h3>
+                        <div class="skills-tag-list">
+                            <span class="tool-tag skill-badge">Project Management</span>
+                            <span class="tool-tag skill-badge">Proofreading & Copyediting</span>
+                            <span class="tool-tag skill-badge">Work Ethic & Willingness to Learn</span>
+                            <span class="tool-tag skill-badge">Operations Management</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skills-sidebar-graphic">
+                    <!-- PALETTE ARCH ILLUSTRATION: Brand Asset -->
+                    <img src="images/palette.png" alt="11 color palette arc" class="brand-image skills-palette-img">
+                    <h4 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-top: 2rem; color: var(--color-black);">Constant Cultivation</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.95rem; max-width: 250px; color: var(--color-gray);">Expanding my digital skillset every season to drive brand conversions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section" id="contact" style="border-bottom: none;">
+            <div class="section-title-wrap">
+                <h2 class="section-title">let's grow together</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-container">
+                <!-- Left Panel: Info & Links -->
+                <div class="contact-info-panel">
+                    <h3 class="contact-cta">Ready to start a creative project?</h3>
+                    <p class="contact-sub-cta">Currently open to graphic design, digital marketing, and creative director roles — on-site, hybrid, or remote.</p>
+                    
+                    <a href="mailto:alyssamspear@gmail.com" class="contact-email-link" id="contact-email">alyssamspear@gmail.com</a>
+                    
+                    <div class="social-bar">
+                        <a href="https://linkedin.com" target="_blank" class="social-circle-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-circle-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Resume Download & Tomatoes Art -->
+                <div class="contact-resume-panel">
+                    <!-- TOMATOES ILLUSTRATION: Brand Asset -->
+                    <img src="images/tomatoes.png" alt="Tomatoes illustration" class="brand-image contact-tomatoes-img">
+
+                    <h4 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-top: 1rem; margin-bottom: 0.5rem; color: var(--color-black);">Professional Track</h4>
+                    <p style="color: var(--color-gray); margin-bottom: 2rem; max-width: 280px; font-size: 0.95rem;">Review my detailed experience across graphic design platforms, ad tracking, and client growth campaigns.</p>
+                    
+                    <a href="#" class="btn" style="background-color: var(--color-tan); color: var(--color-black);" id="resume-download-btn">
+                        Download My Resume
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SIGNATURE -->
+    <footer style="border-top: var(--border-main); background: var(--color-bg);">
+        <div class="footer-wrap">
+            <p class="footer-copy">&copy; <span id="current-year"></span> Alyssa Spear. All rights reserved.</p>
+            <span class="footer-signature">cultivated with heart</span>
+        </div>
+    </footer>
+
+    <!-- Script for Dynamic Filtering & Skills Progress -->
+    <script src="script.js"></script>
+</body>
+</html>

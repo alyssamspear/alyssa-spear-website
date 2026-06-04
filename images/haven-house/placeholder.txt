@@ -1,0 +1,2 @@
+This is a placeholder file for Haven House images.
+The website's detail page haven-house.html references placeholder image paths in this directory.
