@@ -1152,25 +1152,6 @@ a {
     margin-top: 0.5rem;
 }
 
-/* Placeholder Slots */
-.placeholder-item {
-    background-color: var(--color-bg) !important;
-}
 
-.placeholder-tag {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(7, 7, 7, 0.85);
-    color: var(--color-white);
-    padding: 0.5rem;
-    font-size: 0.8rem;
-    font-family: var(--font-body);
-    font-weight: 600;
-    text-align: center;
-    border-top: var(--border-main);
-    z-index: 5;
-}
 
 
