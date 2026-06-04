@@ -359,17 +359,6 @@ a {
     overflow: hidden;
 }
 
-.about-graphic-container::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: var(--border-main);
-    top: 6px;
-    left: 6px;
-    pointer-events: none;
-}
-
 .about-content {
     display: flex;
     flex-direction: column;
@@ -977,7 +966,10 @@ a {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--color-white);
+    padding: 12px;
+    box-sizing: border-box;
     transition: var(--transition-base);
 }
 
@@ -1127,7 +1119,10 @@ a {
 .merch-card .back-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--color-white);
+    padding: 12px;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;

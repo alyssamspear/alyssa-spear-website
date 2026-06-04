@@ -203,8 +203,10 @@
             </p>
             <div class="video-grid" style="grid-template-columns: minmax(320px, 600px); justify-content: center;">
                 <div class="video-item">
-                    <div class="video-embed-wrap">
-                        <iframe src="https://www.youtube.com/embed/4WfZJ0LM9sk" frameborder="0" allowfullscreen></iframe>
+                    <div id="fb-root"></div>
+                    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+                    <div class="fb-video-container" style="width: 100%; display: flex; justify-content: center; background: var(--color-black); border: var(--border-main); padding: 1rem 0; box-sizing: border-box; overflow: hidden;">
+                        <div class="fb-video" data-href="https://www.facebook.com/RealityUpgrades/videos/1126997455818902/" data-width="500" data-show-text="false"></div>
                     </div>
                     <h4 class="video-title">Saddle Hill Winery Mural Time-lapse</h4>
                     <p class="video-desc">Behind-the-scenes recording showing paint progression of the large-format mural installation.</p>
