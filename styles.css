@@ -338,6 +338,15 @@ a {
     }
 }
 
+.about-orchid {
+    transform: scale(2.8) translateX(-8%);
+}
+
+.about-orchid.brand-image:hover {
+    transform: scale(2.85) translateX(-8%) rotate(1deg);
+}
+
+
 .about-graphic-container {
     border: var(--border-main);
     box-shadow: var(--shadow-flat);
