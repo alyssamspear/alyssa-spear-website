@@ -1156,6 +1156,67 @@ a {
     margin-top: 0.5rem;
 }
 
+/* ══════════════════════════════════════════
+   REALITY UPGRADE - NEW SECTIONS
+   ══════════════════════════════════════════ */
 
+.ru-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.ru-card {
+    border: var(--border-main);
+    box-shadow: var(--shadow-flat);
+    padding: 2rem;
+    background: var(--color-white);
+    transition: var(--transition-base);
+}
+
+.ru-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-flat-hover);
+}
+
+.ru-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.ru-card p {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    line-height: 1.7;
+}
+
+.ru-reframe {
+    border: var(--border-main);
+    box-shadow: var(--shadow-flat);
+    background: var(--color-white);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-base);
+}
+
+.ru-reframe:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-flat-hover);
+}
+
+.ru-reframe .old {
+    color: var(--color-gray);
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+}
+
+.ru-reframe .new {
+    font-weight: 700;
+    color: var(--color-black);
+    font-size: 1.1rem;
+}
 
 
