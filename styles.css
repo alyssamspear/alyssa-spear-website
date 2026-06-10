@@ -685,6 +685,10 @@ a {
     font-weight: 800;
     margin-bottom: 1.5rem;
 }
+.contact-cta {
+    color: #070707;
+}
+
 
 .contact-sub-cta {
     font-size: 1.1rem;
