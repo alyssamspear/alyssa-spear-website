@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
         logoLink.addEventListener('click', (e) => {
             e.preventDefault();
             createBotanicalSparkle(e.clientX, e.clientY);
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 400); // Trigger sparkle animation, then redirect home
         });
     }
 
@@ -113,6 +116,75 @@ document.addEventListener('DOMContentLoaded', () => {
             animation.onfinish = () => {
                 leafSpark.remove();
             };
+        }
+    }
+
+    // 5. Lightbox Modal for Stockton, Evergreen, and Reality Upgrade Pages
+    const path = window.location.pathname.toLowerCase();
+    const isEligiblePage = path.includes('stockton') || path.includes('evergreen') || path.includes('reality-upgrade');
+    
+    if (isEligiblePage) {
+        const hasGalleryImages = document.querySelector('.gallery-item img, .mural-hero-wrap img, .merch-images img');
+        if (hasGalleryImages) {
+            // Create Lightbox Markup
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox-modal';
+            lightbox.className = 'lightbox-modal';
+            lightbox.innerHTML = `
+                <span class="lightbox-close">&times;</span>
+                <div class="lightbox-content-wrap">
+                    <img class="lightbox-image" id="lightbox-img" src="" alt="">
+                    <div class="lightbox-caption" id="lightbox-caption"></div>
+                </div>
+            `;
+            document.body.appendChild(lightbox);
+
+            const lightboxImg = lightbox.querySelector('#lightbox-img');
+            const lightboxCaption = lightbox.querySelector('#lightbox-caption');
+            const closeBtn = lightbox.querySelector('.lightbox-close');
+
+            const openLightbox = (src, alt) => {
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || 'Enlarged View';
+                lightboxCaption.textContent = alt || '';
+                lightbox.style.display = 'flex';
+                // Force reflow
+                lightbox.offsetHeight;
+                lightbox.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('show');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    lightbox.style.display = 'none';
+                }, 300);
+            };
+
+            // Bind click to all eligible images
+            const imagesToEnlarge = document.querySelectorAll('.gallery-item img, .mural-hero-wrap img, .merch-images img');
+            imagesToEnlarge.forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', (e) => {
+                    openLightbox(img.src, img.alt);
+                });
+            });
+
+            // Close listeners
+            closeBtn.addEventListener('click', closeLightbox);
+            
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+                    closeLightbox();
+                }
+            });
         }
     }
 });
