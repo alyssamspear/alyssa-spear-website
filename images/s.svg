@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 720 720">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #d79852;
+        stroke-width: 20.12px;
+      }
+
+      .st0, .st1 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .st1 {
+        fill: none;
+        stroke-width: 18.87px;
+      }
+
+      .st2 {
+        fill: #49648d;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M559.85,258.05c0-110.38-89.48-199.85-199.85-199.85s-199.85,89.48-199.85,199.85"/>
+  <path class="st2" d="M559.85,462.66c0,110.38-89.48,199.85-199.85,199.85s-199.85-89.48-199.85-199.85"/>
+  <path class="st1" d="M559.85,462.66H160.15c0,110.38,89.48,199.85,199.85,199.85s199.85-89.48,199.85-199.85l-399.71-204.61c0-110.38,89.48-199.85,199.85-199.85s199.85,89.48,199.85,199.85H160.15"/>
+</svg>
