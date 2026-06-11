@@ -113,8 +113,13 @@ a {
     height: 1.6em;
     width: auto;
     transform: translateY(0.25em);
+    margin-right: -1px;
+}
+
+.logo-letter-s {
     margin-right: -4px;
 }
+
 
 
 .nav-menu {
