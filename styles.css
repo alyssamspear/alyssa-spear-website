@@ -107,6 +107,15 @@ a {
     letter-spacing: -0.02em;
 }
 
+.logo-letter {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 1.6em;
+    width: auto;
+    transform: translateY(0.25em);
+    margin-right: -1px;
+}
+
 .nav-menu {
     display: flex;
     gap: 2.5rem;
